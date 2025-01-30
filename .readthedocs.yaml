@@ -4,7 +4,6 @@ build:
   os: "ubuntu-22.04"
   apt_packages:
       - openjdk-21-jdk
-      - libsaxon-java
   tools:
     python: "3.11"
   jobs:
@@ -14,9 +13,10 @@ build:
       - mkdir -p ./saxonhe/
       - echo "Downloading Saxon-HE jar"
       - wget -O ./saxonhe/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
-      - export CLASSPATH=$CLASSPATH:./saxonhe/saxon-he.jar
-      - echo "CLASSPATH=$CLASSPATH"
+      - echo "export CLASSPATH=\$CLASSPATH:$(pwd)/saxonhe/saxon-he.jar" >> $BASH_ENV
+      - source $BASH_ENV
       - echo "Listing files in saxonhe folder"
+      - echo "$CLASSPATH"
       - ls -l ./saxonhe/
 
 python:
