@@ -7,13 +7,9 @@ build:
   jobs:
     post_checkout:
       - git fetch --unshallow || true
-    pre_build:
-      - apt-get update && apt-get install -y openjdk-17-jre
-      - wget -O /usr/local/bin/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
-      - echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64' >> ~/.bashrc
-      - echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
-      - echo 'export SAXON_HOME=/usr/local/bin/saxon-he.jar' >> ~/.bashrc
-      - source ~/.bashrc
+    apt_packages:
+      - java-common
+      - libsaxonhe-java
 
 python:
   install:
