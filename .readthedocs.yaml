@@ -13,8 +13,9 @@ build:
       - mkdir -p ./saxonhe/
       - echo $SHELL
       - echo "Downloading Saxon-HE jar"
-      - wget -O ./saxonhe/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
-      - export CLASSPATH=$CLASSPATH:$(pwd)/saxonhe/saxon-he.jar
+      - wget -O ./saxonhe/Saxon-HE-12.4.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
+      - export CLASSPATH=$CLASSPATH:$(pwd)/saxonhe/Saxon-HE-12.4.jar
+      - export SAXONICAJAR=Saxon-HE-12.4.jar
       - echo "$CLASSPATH"
       - ls -l ./saxonhe/
 
