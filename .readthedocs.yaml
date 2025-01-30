@@ -14,7 +14,7 @@ build:
       - mkdir -p ~/saxonhe/
       - echo "Downloading Saxon-HE jar"
       - wget -O ~/saxonhe/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
-      - export CLASSPATH=$CLASSPATH:/~/saxonhe/saxon-he.jar
+      - export CLASSPATH=$CLASSPATH:~/saxonhe/saxon-he.jar
 python:
   install:
     - requirements: docs/requirements.txt
