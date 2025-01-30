@@ -14,7 +14,7 @@ build:
       - echo "Downloading Saxon-HE jar"
       - wget -O ./saxonhe/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
       - echo "export CLASSPATH=\$CLASSPATH:$(pwd)/saxonhe/saxon-he.jar" >> ~/.bashrc
-      - source ~/.bashrc
+      - . ~/.bashrc
       - echo "Listing files in saxonhe folder"
       - echo "$CLASSPATH"
       - ls -l ./saxonhe/
