@@ -7,7 +7,12 @@ build:
   jobs:
     post_checkout:
       - git fetch --unshallow || true
-    
+    pre_build:
+      # Install Java for Saxon-HE
+      - apt-get update && apt-get install -y openjdk-17-jre
+      # Download Saxon-HE JAR file (replace with the latest version if needed)
+      - wget -O /usr/local/bin/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
+
 python:
   install:
     - requirements: docs/requirements.txt
