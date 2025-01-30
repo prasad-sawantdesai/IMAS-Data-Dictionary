@@ -12,7 +12,8 @@ build:
       - git fetch --unshallow || true
     pre_build:
       - wget -O /usr/local/bin/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
-
+      - if [ -f /usr/local/bin/saxon-he.jar ]; then echo "Saxon-HE jar downloaded successfully"; else echo "Failed to download Saxon-HE jar"; fi
+      - export CLASSPATH=$CLASSPATH:/usr/local/bin/saxon-he.jar
 python:
   install:
     - requirements: docs/requirements.txt
