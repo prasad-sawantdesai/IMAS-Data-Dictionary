@@ -10,6 +10,7 @@ build:
   jobs:
     post_checkout:
       - git fetch --unshallow || true
+    post_create_environment:
       - mkdir -p ~/saxonhe/
       - echo "Downloading Saxon-HE jar"
       - wget -O ~/saxonhe/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
