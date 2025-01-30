@@ -14,6 +14,7 @@ build:
       - echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
       - echo 'export SAXON_HOME=/usr/local/bin/saxon-he.jar' >> ~/.bashrc
       - source ~/.bashrc
+
 python:
   install:
     - requirements: docs/requirements.txt
