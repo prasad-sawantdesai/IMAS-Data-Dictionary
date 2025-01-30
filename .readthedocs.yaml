@@ -4,13 +4,14 @@ build:
   os: "ubuntu-22.04"
   apt_packages:
       - openjdk-21-jdk
-      - libsaxonhe-java
+      - libsaxon-java
   tools:
     python: "3.11"
   jobs:
     post_checkout:
       - git fetch --unshallow || true
-    
+    pre_build:
+      - wget -O /usr/local/bin/saxon-he.jar "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar"
 
 python:
   install:
