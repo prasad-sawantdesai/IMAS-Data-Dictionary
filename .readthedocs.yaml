@@ -2,14 +2,15 @@ version: 2
 
 build:
   os: "ubuntu-22.04"
+  apt_packages:
+      - java-common
+      - libsaxonhe-java
   tools:
     python: "3.11"
   jobs:
     post_checkout:
       - git fetch --unshallow || true
-    apt_packages:
-      - java-common
-      - libsaxonhe-java
+    
 
 python:
   install:
