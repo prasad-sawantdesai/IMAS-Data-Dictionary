@@ -1,5 +1,8 @@
 version: 2
 
+env:
+  CLASSPATH: "./saxonhe/Saxon-HE-12.4.jar"
+
 build:
   os: "ubuntu-22.04"
   apt_packages:
@@ -29,5 +32,3 @@ sphinx:
   builder: html
   configuration: docs/conf.py
   fail_on_warning: false
-  environment:
-    CLASSPATH: "./saxonhe/Saxon-HE-12.4.jar"
