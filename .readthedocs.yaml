@@ -1,8 +1,5 @@
 version: 2
 
-env:
-  CLASSPATH: "./saxonhe/Saxon-HE-12.4.jar"
-
 build:
   os: "ubuntu-22.04"
   apt_packages:
