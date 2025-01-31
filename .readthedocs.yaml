@@ -29,3 +29,5 @@ sphinx:
   builder: html
   configuration: docs/conf.py
   fail_on_warning: false
+  environment:
+    CLASSPATH: "./saxonhe/Saxon-HE-12.4.jar"
