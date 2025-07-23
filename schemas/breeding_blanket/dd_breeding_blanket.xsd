@@ -94,7 +94,7 @@
 					<xs:group ref="FLT_0D"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="time_slice1" type="bb_module_layer_time_slice" maxOccurs="unbounded">
+			<xs:element name="time_slice" type="bb_module_layer_time_slice" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Dynamic quantities at various time slices</xs:documentation>
 					<xs:appinfo>
@@ -170,7 +170,7 @@
 					</xs:appinfo>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="time_slice3" type="bb_module_cooling_time_slice" maxOccurs="unbounded">
+			<xs:element name="time_slice" type="bb_module_cooling_time_slice" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Dynamic quantities at various time slices</xs:documentation>
 					<xs:appinfo>
@@ -348,7 +348,7 @@
 					<xs:documentation>Cooling system of this module</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="time_slice2" type="bb_module_time_slice" maxOccurs="unbounded">
+			<xs:element name="time_slice" type="bb_module_time_slice" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Dynamic quantities at various time slices</xs:documentation>
 					<xs:appinfo>
@@ -479,7 +479,7 @@
 						</xs:appinfo>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="mytime_slice" type="bb_time_slice" maxOccurs="unbounded">
+				<xs:element name="time_slice" type="bb_time_slice" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Dynamic quantities for a set of time_slices</xs:documentation>
 						<xs:appinfo>
