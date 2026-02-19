@@ -1050,6 +1050,19 @@
 					<xs:group ref="FLT_0D"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="sigma">
+				<xs:annotation>
+					<xs:documentation>Standard deviation of the measurement error</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<units>m</units>
+						<introduced_after_version>4.1.1</introduced_after_version>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_0D"/>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="position_reconstructed" type="rz0d_dynamic_aos">
 				<xs:annotation>
 					<xs:documentation>Position estimated from the reconstructed equilibrium</xs:documentation>
@@ -1149,6 +1162,19 @@
 					<xs:group ref="FLT_0D"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="sigma">
+				<xs:annotation>
+					<xs:documentation>Standard deviation of the measurement error</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<units>as_parent</units>
+						<introduced_after_version>4.1.1</introduced_after_version>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_0D"/>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="reconstructed">
 				<xs:annotation>
 					<xs:documentation>Value calculated from the reconstructed equilibrium</xs:documentation>
@@ -1235,6 +1261,19 @@
 					<xs:appinfo>
 						<type>dynamic</type>
 						<units>1</units>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_0D"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sigma">
+				<xs:annotation>
+					<xs:documentation>Standard deviation of the measurement error</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<units>as_parent</units>
+						<introduced_after_version>4.1.1</introduced_after_version>
 					</xs:appinfo>
 				</xs:annotation>
 				<xs:complexType>
@@ -1336,6 +1375,19 @@
 					<xs:group ref="FLT_0D"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="sigma">
+				<xs:annotation>
+					<xs:documentation>Standard deviation of the measurement error</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<units>as_parent</units>
+						<introduced_after_version>4.1.1</introduced_after_version>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_0D"/>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="reconstructed">
 				<xs:annotation>
 					<xs:documentation>Value calculated from the reconstructed equilibrium</xs:documentation>
@@ -1431,6 +1483,19 @@
 					<xs:group ref="FLT_0D"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="sigma">
+				<xs:annotation>
+					<xs:documentation>Standard deviation of the measurement error</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<units>as_parent</units>
+						<introduced_after_version>4.1.1</introduced_after_version>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_0D"/>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="reconstructed">
 				<xs:annotation>
 					<xs:documentation>Value calculated from the reconstructed equilibrium</xs:documentation>
@@ -1517,6 +1582,19 @@
 					<xs:appinfo>
 						<type>dynamic</type>
 						<units>1</units>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_0D"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sigma">
+				<xs:annotation>
+					<xs:documentation>Standard deviation of the measurement error</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<units>as_parent</units>
+						<introduced_after_version>4.1.1</introduced_after_version>
 					</xs:appinfo>
 				</xs:annotation>
 				<xs:complexType>
@@ -2062,9 +2140,24 @@
 					<xs:group ref="FLT_1D"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="triangularity">
+				<xs:annotation>
+					<xs:documentation>Triangularity</xs:documentation>
+					<xs:appinfo>
+						<type>dynamic</type>
+						<coordinate1>../psi</coordinate1>
+						<units>1</units>
+						<url>equilibrium/DefinitionEqBoundary.svg</url>
+						<introduced_after_version>4.1.1</introduced_after_version>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="FLT_1D"/>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="triangularity_upper">
 				<xs:annotation>
-					<xs:documentation>Upper triangularity w.r.t. magnetic axis</xs:documentation>
+					<xs:documentation>Upper triangularity</xs:documentation>
 					<xs:appinfo>
 						<type>dynamic</type>
 						<coordinate1>../psi</coordinate1>
@@ -2078,7 +2171,7 @@
 			</xs:element>
 			<xs:element name="triangularity_lower">
 				<xs:annotation>
-					<xs:documentation>Lower triangularity w.r.t. magnetic axis</xs:documentation>
+					<xs:documentation>Lower triangularity</xs:documentation>
 					<xs:appinfo>
 						<type>dynamic</type>
 						<coordinate1>../psi</coordinate1>
@@ -2866,7 +2959,7 @@
 			<xs:appinfo>
 				<lifecycle_status>active</lifecycle_status>
 				<lifecycle_version>3.1.0</lifecycle_version>
-				<lifecycle_last_change>4.1.0</lifecycle_last_change>
+				<lifecycle_last_change>4.2.0</lifecycle_last_change>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:complexType>

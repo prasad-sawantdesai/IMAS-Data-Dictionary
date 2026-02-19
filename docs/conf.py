@@ -7,7 +7,7 @@ import datetime
 import os
 import subprocess
 import sys
-from git import Repo
+
 # Ensure that our extension module can be imported:
 sys.path.append(os.path.curdir)
 import sphinx_dd_extension.autodoc
@@ -21,18 +21,19 @@ copyright = f"{datetime.datetime.now().year}, ITER Organization"
 author = "ITER Organization"
 try:
     version = subprocess.check_output(["git", "describe"]).decode().strip()
-    last_tag = subprocess.check_output(["git", "describe", "--abbrev=0"]).decode().strip()
+    last_tag = (
+        subprocess.check_output(["git", "describe", "--abbrev=0"]).decode().strip()
+    )
     is_develop = version != last_tag
 except Exception as _:
     os.chdir("..")
     from setuptools_scm import get_version
-    version=get_version()
-    is_develop="dev" in version
+
+    version = get_version()
+    is_develop = "dev" in version
     os.chdir("docs")
 
-html_context = {
-    "is_develop": is_develop
-}
+html_context = {"is_develop": is_develop}
 
 language = "en"
 
@@ -49,7 +50,6 @@ dd_autodoc_generate = True
 
 extensions = [
     "sphinx.ext.todo",
-    # "sphinx.ext.autosectionlabel",
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
     "sphinx_immaterial",
@@ -84,23 +84,12 @@ html_theme_options = {
         "repo": "fontawesome/brands/github",
     },
     "features": [
-        # "navigation.expand",
-        # "navigation.tabs",
         "navigation.sections",
         "navigation.instant",
-        # "header.autohide",
         "navigation.top",
-        # "navigation.tracking",
-        # "search.highlight",
-        # "search.share",
-        # "toc.integrate",
-        # "toc.follow",
         "toc.sticky",
-        # "content.tabs.link",
         "announce.dismiss",
     ],
-    # "toc_title_is_page_title": True,
-    # "globaltoc_collapse": True,
     "palette": [
         {
             "media": "(prefers-color-scheme: light)",
@@ -123,8 +112,7 @@ html_theme_options = {
             },
         },
     ],
-    "version_dropdown": True,
-    "version_json": "../versions.js",
+    "version_dropdown": False,
 }
 
 html_static_path = ["_static"]
