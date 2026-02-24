@@ -10,6 +10,7 @@
 	<xs:include schemaLocation="schemas/amns_data/dd_amns_data.xsd"/>
 	<xs:include schemaLocation="schemas/core_profiles/dd_core_profiles.xsd"/>
 	<xs:include schemaLocation="schemas/distributions/dd_distributions.xsd"/>
+	<xs:include schemaLocation="schemas/equilibrium/dd_equilibrium.xsd"/>
 	<xs:include schemaLocation="schemas/magnetics/dd_magnetics.xsd"/>
 	<xs:include schemaLocation="schemas/summary/dd_summary.xsd"/>
 	<xs:include schemaLocation="schemas/waves/dd_waves.xsd"/>
@@ -24,6 +25,7 @@
 			<xs:sequence>
 				<xs:element ref="amns_data" maxOccurs="2"/>
 				<xs:element ref="core_profiles" maxOccurs="15"/>
+				<xs:element ref="equilibrium" maxOccurs="15"/>
 		
 				<xs:element ref="distributions" maxOccurs="8"/>
 				
